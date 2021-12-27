@@ -37,6 +37,9 @@ inputs:
   config_file:
     description: 'bridgecrew configuration file'
     required: false
+  output_bc_ids:
+    description: 'Output Bridgecrew IDs'
+    required: false
 
 
 branding:
@@ -55,6 +58,7 @@ runs:
     - ${{ inputs.external_checks_dir }}
     - ${{ inputs.output_format }}
     - ${{ inputs.config_file }}
+    - ${{ inputs.output_bc_ids }}
 
   env:
     API_KEY_VARIABLE: ${{ inputs.api-key }}
